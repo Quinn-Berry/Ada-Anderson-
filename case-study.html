@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study — Defending $2M in Renewals · Ada Anderson</title>
+  <meta name="description" content="How Ada Anderson stabilized 85% of competitively-threatened accounts in 90 days, defending $2M in at-risk renewals through cross-functional execution." />
+  <meta name="theme-color" content="#0B1F3A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    .case-hero {
+      background: var(--navy);
+      color: var(--bone);
+      padding-top: clamp(8rem, 14vw, 11rem);
+      padding-bottom: clamp(4rem, 8vw, 6rem);
+      position: relative;
+      overflow: hidden;
+    }
+    .case-hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 90% 0%, rgba(176,141,87,0.22), transparent 50%),
+        radial-gradient(circle at 10% 100%, rgba(176,141,87,0.10), transparent 55%);
+    }
+    .case-hero .container { position: relative; z-index: 1; }
+    .case-hero h1 { color: var(--bone); margin-bottom: 1.5rem; }
+    .case-hero h1 em { color: var(--bronze); font-style: italic; font-weight: 400; }
+    .case-hero .lede { color: rgba(248,245,240,0.85); max-width: 38em; }
+    .case-hero .eyebrow { color: var(--bronze); }
+
+    .case-marquee {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.12);
+      margin-top: clamp(3rem, 6vw, 4rem);
+    }
+    .case-marquee-item {
+      background: var(--navy);
+      padding: 1.5rem 1.25rem;
+    }
+    .case-marquee-num {
+      font-family: var(--serif);
+      font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+      color: var(--bone);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .case-marquee-num span { color: var(--bronze); }
+    .case-marquee-label {
+      font-size: 0.75rem;
+      color: rgba(248,245,240,0.7);
+      letter-spacing: 0.06em;
+      line-height: 1.45;
+    }
+    @media (max-width: 720px) {
+      .case-marquee { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .case-section {
+      padding: clamp(4rem, 8vw, 6.5rem) 0;
+      border-bottom: 1px solid var(--bone-line);
+    }
+    .case-section:last-of-type { border-bottom: none; }
+
+    .case-section-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 2fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: start;
+    }
+    .case-section-label {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      position: sticky;
+      top: 100px;
+    }
+    .case-section-label .num {
+      display: block;
+      font-family: var(--serif);
+      font-size: 4rem;
+      color: var(--navy);
+      line-height: 1;
+      margin-top: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .case-section h2 {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      margin-bottom: 1.5rem;
+    }
+    .case-section .story p { font-size: 1.0625rem; }
+
+    .factors {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin: 1.75rem 0 0;
+    }
+    .factors li {
+      border: 1px solid var(--bone-line);
+      padding: 1rem 1.15rem;
+      font-family: var(--sans);
+      font-size: 0.9375rem;
+      color: var(--charcoal);
+      background: var(--white);
+    }
+    .factors li strong {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+    }
+
+    .play-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1.75rem;
+    }
+    .play-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bone-warm);
+      border-left: 2px solid var(--bronze);
+    }
+    .play-list .play-num {
+      font-family: var(--serif);
+      font-size: 1.125rem;
+      color: var(--bronze-deep);
+      font-weight: 500;
+      min-width: 1.75rem;
+    }
+    .play-list strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .outcome {
+      background: var(--bone-warm);
+      padding: clamp(2.5rem, 5vw, 4rem);
+      margin-top: 2.5rem;
+    }
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .outcome-stat {
+      border-top: 1px solid var(--bronze);
+      padding-top: 1.25rem;
+    }
+    .outcome-stat-num {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .outcome-stat-num span { color: var(--bronze); }
+    .outcome-stat-label {
+      font-family: var(--sans);
+      font-size: 0.875rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    @media (max-width: 720px) {
+      .outcome-grid { grid-template-columns: 1fr; }
+      .factors { grid-template-columns: 1fr; }
+      .case-section-grid { grid-template-columns: 1fr; }
+      .case-section-label { position: static; }
+    }
+
+    .takeaway {
+      background: var(--navy);
+      color: var(--bone);
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      text-align: center;
+    }
+    .takeaway .container { max-width: 680px; }
+    .takeaway-quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+      line-height: 1.45;
+      color: var(--bone);
+    }
+    .takeaway-quote span { color: var(--bronze); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="./index.html" class="nav-brand">Ada Anderson<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./experience.html">Experience</a></li>
+        <li><a href="./case-study.html" class="active">Case Study</a></li>
+        <li><a href="./contact.html" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="container">
+      <span class="eyebrow">Case Study</span>
+      <h1>Defending <em>$2M</em> in at-risk renewals.</h1>
+      <p class="lede">
+        A competitor was gaining traction with a cluster of mid-market accounts. With early signal detection and tight cross-functional execution, 85% of flagged accounts were stabilized inside 90 days&mdash;and customer sentiment lifted on the way out.
+      </p>
+
+      <div class="case-marquee">
+        <div class="case-marquee-item">
+          <div class="case-marquee-num">$2M<span></span></div>
+          <div class="case-marquee-label">Renewal revenue at risk</div>
+        </div>
+        <div class="case-marquee-item">
+          <div class="case-marquee-num">90<span> days</span></div>
+          <div class="case-marquee-label">Execution window</div>
+        </div>
+        <div class="case-marquee-item">
+          <div class="case-marquee-num">85<span>%</span></div>
+          <div class="case-marquee-label">Of flagged accounts stabilized</div>
+        </div>
+        <div class="case-marquee-item">
+          <div class="case-marquee-num">↑<span> NPS</span></div>
+          <div class="case-marquee-label">Among previously at-risk customers</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="case-section">
+    <div class="container">
+      <div class="case-section-grid">
+        <div class="case-section-label">
+          The Challenge
+          <span class="num">01</span>
+        </div>
+        <div class="story reveal">
+          <h2>A competitor was quietly winning my mid-market book.</h2>
+          <p>
+            As a customer success manager at a late-stage startup, I noticed a competitor gaining traction with several of my mid-market accounts&mdash;putting roughly <strong>$2M in renewals at risk</strong> over the next year. The signals were quiet at first: a renewal pushed, a stakeholder going cold, a sudden interest in feature parity. But the pattern was real.
+          </p>
+          <p>
+            Before I could fix anything, I had to figure out what specifically made these accounts vulnerable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" style="background: var(--bone-warm);">
+    <div class="container">
+      <div class="case-section-grid">
+        <div class="case-section-label">
+          The Diagnosis
+          <span class="num">02</span>
+        </div>
+        <div class="story reveal">
+          <h2>Mapping the churn signals.</h2>
+          <p>
+            I worked through the at-risk cohort to identify the risk factors that consistently appeared&mdash;the early indicators that an account was likely to convert into a churn conversation rather than a renewal.
+          </p>
+          <ul class="factors">
+            <li><strong>Industry</strong>Verticals where the competitor had stronger positioning.</li>
+            <li><strong>Company size</strong>Mid-market range where the competitor priced aggressively.</li>
+            <li><strong>Number of locations</strong>Multi-site complexity created a feature-parity narrative.</li>
+            <li><strong>Support sentiment</strong>Recent CSAT/Support trend data, surfaced via Gainsight.</li>
+          </ul>
+          <p style="margin-top: 1.75rem;">
+            Then I set the goal: <strong>reduce at-risk revenue by 30% within one quarter</strong>&mdash;a target tight enough to demand executive attention and tangible enough to mobilize teams beyond CS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <div class="case-section-grid">
+        <div class="case-section-label">
+          The Play
+          <span class="num">03</span>
+        </div>
+        <div class="story reveal">
+          <h2>A coordinated competitive response, run across three teams.</h2>
+          <p>
+            CS alone wasn&rsquo;t going to win this. I partnered with <strong>Account Management</strong>, <strong>Marketing</strong>, and <strong>Customer Experience</strong> to launch a targeted competitive campaign sequenced across the 90-day window.
+          </p>
+          <ul class="play-list">
+            <li>
+              <span class="play-num">i.</span>
+              <div>
+                <strong>Tailored battlecards</strong>
+                Built with Marketing and Product Marketing&mdash;mapping our differentiators directly to the competitor&rsquo;s pitch by industry and use case, and arming AMs with answers to the specific objections we were hearing.
+              </div>
+            </li>
+            <li>
+              <span class="play-num">ii.</span>
+              <div>
+                <strong>Proactive executive outreach</strong>
+                Sequenced executive sponsor touchpoints into the most vulnerable accounts&mdash;not waiting for the renewal conversation, but reframing the relationship before competitive doubt could solidify.
+              </div>
+            </li>
+            <li>
+              <span class="play-num">iii.</span>
+              <div>
+                <strong>Improved onboarding touchpoints</strong>
+                Partnered with CX to tighten onboarding and early-lifecycle touchpoints for vulnerable customers, addressing the support-sentiment risk factor at its source.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" style="background: var(--bone-warm);">
+    <div class="container">
+      <div class="case-section-grid">
+        <div class="case-section-label">
+          The Outcome
+          <span class="num">04</span>
+        </div>
+        <div class="story reveal">
+          <h2>85% stabilized in 90 days&mdash;and a measurable NPS lift on the way out.</h2>
+          <p>
+            Within 90 days, we stabilized <strong>85% of the flagged accounts</strong>&mdash;well past the 30% reduction target. We saw a measurable lift in NPS among the previously at-risk customers, suggesting the response did more than defend revenue: it repaired sentiment.
+          </p>
+          <div class="outcome">
+            <div class="outcome-grid">
+              <div class="outcome-stat">
+                <div class="outcome-stat-num">85<span>%</span></div>
+                <div class="outcome-stat-label">Of flagged accounts stabilized inside the 90-day window.</div>
+              </div>
+              <div class="outcome-stat">
+                <div class="outcome-stat-num">$2M<span></span></div>
+                <div class="outcome-stat-label">In competitive renewals defended across the cohort.</div>
+              </div>
+              <div class="outcome-stat">
+                <div class="outcome-stat-num">↑<span> NPS</span></div>
+                <div class="outcome-stat-label">Measurable lift among previously at-risk customers.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="takeaway">
+    <div class="container">
+      <span class="eyebrow" style="color: var(--bronze);">The takeaway</span>
+      <p class="takeaway-quote">
+        Early signal detection paired with cross-functional execution can turn competitive threats into <span>growth opportunities</span>.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding: clamp(3rem, 6vw, 4.5rem) 0;">
+    <div class="container-narrow" style="text-align: center;">
+      <h2 style="margin-bottom: 1.25rem;">Want to talk through it?</h2>
+      <p class="lede" style="margin-bottom: 2rem;">
+        Happy to walk through the playbook&mdash;the factors, the cadence, the cross-team mechanics&mdash;in more detail.
+      </p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="./contact.html" class="btn btn-primary btn-arrow">Get in touch</a>
+        <a href="./experience.html" class="btn btn-arrow">See full experience</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>&copy; <span id="yr">2026</span> Ada Anderson. All rights reserved.</div>
+      <div>
+        <a href="mailto:adamay425@gmail.com">adamay425@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.linkedin.com/in/ada-anderson" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
